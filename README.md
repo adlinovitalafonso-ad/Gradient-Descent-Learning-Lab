@@ -63,7 +63,7 @@ optimizer-learning-lab/
     └── secrets.toml
 ```
 
-`secrets.toml` should **not** be committed to GitHub.
+`secrets.toml` must **not** be committed to GitHub.
 
 ## Local Installation
 
@@ -91,8 +91,6 @@ Run the Streamlit app:
 python -m streamlit run app.py
 ```
 
-The app should open automatically in your browser.
-
 ## Requirements
 
 The application uses:
@@ -103,7 +101,7 @@ The application uses:
 - Matplotlib
 - SymPy
 
-If cloud analytics using Supabase is added, include:
+If cloud analytics using Supabase is added, also include:
 
 - supabase
 
@@ -115,18 +113,19 @@ Create the following file locally:
 .streamlit/secrets.toml
 ```
 
-Example:
+Store the required access codes and cloud database credentials there.
 
-```toml
-STUDENT_ACCESS_CODE = "MMAIO2026"
-FACULTY_ACCESS_CODE = "FACULTY2026"
-```
+Do **not** place actual access codes, API keys, passwords, or database credentials in:
+- `README.md`
+- `app.py`
+- `requirements.txt`
+- GitHub commits
 
-For cloud deployment, enter these values through Streamlit Community Cloud's **Secrets** settings instead of uploading the file to GitHub.
+For deployment on Streamlit Community Cloud, enter secrets through the app's **Secrets** settings.
 
 ## Deployment
 
-The recommended deployment workflow is:
+Recommended deployment workflow:
 
 ```text
 GitHub
@@ -136,7 +135,7 @@ Streamlit Community Cloud
 Persistent cloud database for analytics
 ```
 
-For classroom deployment with multiple students, a persistent cloud database such as Supabase/PostgreSQL is recommended instead of relying on a local SQLite database.
+For classroom deployment with multiple students, use a persistent cloud database such as Supabase/PostgreSQL rather than relying on a local SQLite database.
 
 ## Teaching Purpose
 
@@ -156,7 +155,7 @@ Reduced Loss
 Convergence
 ```
 
-It allows students to experiment with different starting points, learning rates, datasets, and optimizers to observe how the optimization path changes.
+Students can experiment with different starting points, learning rates, datasets, and optimizers to observe how the optimization path changes.
 
 ## Author
 
