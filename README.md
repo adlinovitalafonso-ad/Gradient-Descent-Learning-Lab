@@ -63,20 +63,12 @@ optimizer-learning-lab/
     └── secrets.toml
 ```
 
-`secrets.toml` must **not** be committed to GitHub.
-
 ## Local Installation
 
 Open Command Prompt and move to the project folder:
 
 ```cmd
 cd /d D:\MMAIO\GD
-```
-
-Activate your Python environment if required:
-
-```cmd
-D:\ortools_env\Scripts\activate
 ```
 
 Install the required packages:
@@ -114,14 +106,6 @@ Create the following file locally:
 ```
 
 Store the required access codes and cloud database credentials there.
-
-Do **not** place actual access codes, API keys, passwords, or database credentials in:
-- `README.md`
-- `app.py`
-- `requirements.txt`
-- GitHub commits
-
-For deployment on Streamlit Community Cloud, enter secrets through the app's **Secrets** settings.
 
 ## Deployment
 
